@@ -38,4 +38,4 @@ You can stop the countdown timer anytime by passing `true` (Boolean) with `stop`
 
 ### Caution 
 
-Please don't provide any confusing date format since it has no dependency to Moment.js or any other date helpers.
+Please don't provide any confusing date format since it has no dependency to Moment.js or any other date helpers.# countdown-vue
