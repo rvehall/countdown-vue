@@ -48,7 +48,7 @@ export default {
         }
 
         let endTime = this.deadline ? this.deadline : this.end;
-        this.date = Math.trunc(Date.parse(endTime.replace(/-/g, "/")) / 1000);
+        this.date = Date.parse(endTime.replace(/-/g, "/")) ? Math.trunc(Date.parse(endTime.replace(/-/g, "/")) / 1000) : Math.trunc(Date.parse(endTime) / 1000);
 
         if (!this.date) {
             throw new Error("Invalid props value, correct the 'deadline' or 'end'");
