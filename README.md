@@ -14,9 +14,9 @@ A simple countdown timer component for VueJS 2.
 ```html
 <template>
   <div>
-    <Countdown deadline="August 22, 2022"></Countdown>
+    <Countdown end="August 22, 2022" showDays showHours showMinutes showSeconds></Countdown>
     or 
-    <Countdown end="August 22, 2022"></Countdown>
+    <Countdown end="2018-03-16T00:42:24.000Z" showDays showHours showMinutes showSeconds></Countdown>
   </div>
 </template>
 ```
@@ -33,9 +33,7 @@ export default {
 
 ## Other Config
 
-You can stop the countdown timer anytime by passing `true` (Boolean) with `stop` props.
+You can stop the countdown timer anytime by passing back `stop` props.
 
 
-### Caution 
-
-Please don't provide any confusing date format since it has no dependency to Moment.js or any other date helpers.# countdown-vue
+### Based on [gentanwar's](https://github.com/getanwar/vuejs-countdown) plugin
