@@ -1,18 +1,18 @@
 <template>
     <ul class="vuejs-countdown">
-        <li v-if="days > 0">
+        <li v-if="days > 0 && showDays">
             <p class="digit">{{ days | twoDigits }}</p>
             <p class="text">{{ days > 1 ? 'days' : 'day' }}</p>
         </li>
-        <li>
+        <li v-if="showHours">
             <p class="digit">{{ hours | twoDigits }}</p>
             <p class="text">{{ hours > 1 ? 'hours' : 'hour' }}</p>
         </li>
-        <li>
+        <li v-if="showMinutes">
             <p class="digit">{{ minutes | twoDigits }}</p>
             <p class="text">min</p>
         </li>
-        <li>
+        <li v-if="showSeconds">
             <p class="digit">{{ seconds | twoDigits }}</p>
             <p class="text">Sec</p>
         </li>
@@ -23,15 +23,24 @@
 let interval = null;
 
 export default {
-    name: 'vuejsCountDown',
+    name: 'CountDown',
     props: {
-        deadline: {
-            type: String
-        },
         end: {
             type: String
         },
         stop: {
+            type: Boolean
+        },
+        showDays: {
+            type: Boolean
+        },
+        showHours: {
+            type: Boolean
+        },
+        showMinutes: {
+            type: Boolean
+        },
+        showSeconds: {
             type: Boolean
         }
     },
@@ -43,15 +52,15 @@ export default {
         }
     },
     created() {
-        if (!this.deadline && !this.end) {
-            throw new Error("Missing props 'deadline' or 'end'");
+        if (!this.end) {
+            throw new Error("Missing props 'endTime'");
         }
 
-        let endTime = this.deadline ? this.deadline : this.end;
+        let endTime = this.end;
         this.date = Date.parse(endTime.replace(/-/g, "/")) ? Math.trunc(Date.parse(endTime.replace(/-/g, "/")) / 1000) : Math.trunc(Date.parse(endTime) / 1000);
 
         if (!this.date) {
-            throw new Error("Invalid props value, correct the 'deadline' or 'end'");
+            throw new Error("Invalid props value, correct the 'endTime'");
         }
 
         interval = setInterval(() => {
