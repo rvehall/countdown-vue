@@ -1,11 +1,11 @@
 {
-  "name": "vuejs-countdown",
-  "version": "0.2.1",
+  "name": "countdown-vue",
+  "version": "0.1",
   "description": "A simple countdown timer component for vue js 2.0",
   "main": "dist/vuejs-countdown.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/getanwar/vuejs-countdown.git"
+    "url": "https://github.com/rvehall/countdown-vue.git"
   },
   "keywords": [
     "Countdown",
@@ -13,9 +13,9 @@
     "vue countdown"
   ],
   "bugs": {
-    "url": "https://github.com/getanwar/vuejs-countdown/issues"
+    "url": "https://github.com/rvehall/countdown-vue/issues"
   },
-  "author": "Anwar H.",
+  "author": "Anwar H., rvehall",
   "license": "MIT",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack --progress --watch",
@@ -23,7 +23,7 @@
     "prepare": "npm run build"
   },
   "files": [
-    "dist/vuejs-countdown.js"
+    "dist/countdown-vue.js"
   ],
   "devDependencies": {
     "babel-core": "^6.26.0",
