@@ -1,4 +1,4 @@
-# vuejs-countdown
+# countdown-vue
 A simple countdown timer component for VueJS 2.
 
 ![screenshot](https://raw.githubusercontent.com/getanwar/vuejs-countdown/master/scr.png "Vue JS Countdown")
@@ -6,7 +6,7 @@ A simple countdown timer component for VueJS 2.
 ## Installation
 #### npm
 
-`npm i vuejs-countdown --save`
+`npm i countdown-vue --save`
 
 
 ## Usage
