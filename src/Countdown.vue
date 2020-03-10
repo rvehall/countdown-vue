@@ -57,9 +57,12 @@ export default {
         }
 
         let endTime = this.end;
-        this.date = Date.parse(endTime.replace(/-/g, "/")) ? Math.trunc(Date.parse(endTime.replace(/-/g, "/")) / 1000) : Math.trunc(Date.parse(endTime) / 1000);
-
-        if (!this.date) {
+        let parsed = Date.parse(endTime);
+        
+        if(parsed) {
+            this.date = Math.trunc( parsed / 1000);
+        }
+        else {
             throw new Error("Invalid props value, correct the 'endTime'");
         }
 
