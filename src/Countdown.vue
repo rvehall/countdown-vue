@@ -48,7 +48,7 @@ export default {
             type: Boolean,
             default: false
         },
-        endFunc: {
+        endFunction: {
             type: Function,
             default: () => { console.log("Goodbye and thanks for all the fish.") }
         }
@@ -101,7 +101,7 @@ export default {
             this.diff = this.date - this.now;
             if(this.diff <= 0 || this.stop){
                 this.diff = 0;
-                this.endFunc();
+                this.endFunction();
                 // Remove interval
                 clearInterval(interval);
             }

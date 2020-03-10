@@ -14,9 +14,9 @@ A simple countdown timer component for VueJS 2.
 ```html
 <template>
   <div>
-    <Countdown end="August 22, 2022" showDays showHours showMinutes showSeconds endFunc="func"></Countdown>
+    <Countdown end="August 22, 2022" showDays showHours showMinutes showSeconds :endFunction="function"></Countdown>
     or 
-    <Countdown end="2018-03-16T00:42:24.000Z" showDays showHours showMinutes showSeconds endFunc="func"></Countdown>
+    <Countdown end="2018-03-16T00:42:24.000Z" showDays showHours showMinutes showSeconds :endFunction="function"></Countdown>
   </div>
 </template>
 ```
