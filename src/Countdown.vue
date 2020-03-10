@@ -53,17 +53,17 @@ export default {
     },
     created() {
         if (!this.end) {
-            throw new Error("Missing props 'endTime'");
+            throw new Error("Missing props 'end'");
         }
 
         let endTime = this.end;
         let parsed = Date.parse(endTime);
-        
+
         if(parsed) {
             this.date = Math.trunc( parsed / 1000);
         }
         else {
-            throw new Error("Invalid props value, correct the 'endTime'");
+            throw new Error("Invalid props value, correct the 'end'");
         }
 
         interval = setInterval(() => {
