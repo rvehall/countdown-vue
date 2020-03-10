@@ -29,19 +29,28 @@ export default {
             type: String
         },
         stop: {
-            type: Boolean
+            type: Boolean,
+            default: false
         },
         showDays: {
-            type: Boolean
+            type: Boolean,
+            default: false
         },
         showHours: {
-            type: Boolean
+            type: Boolean,
+            default: false
         },
         showMinutes: {
-            type: Boolean
+            type: Boolean,
+            default: false
         },
         showSeconds: {
-            type: Boolean
+            type: Boolean,
+            default: false
+        },
+        endFunc: {
+            type: Function,
+            default: () => { console.log("Goodbye and thanks for all the fish.") }
         }
     },
     data() {
@@ -92,6 +101,7 @@ export default {
             this.diff = this.date - this.now;
             if(this.diff <= 0 || this.stop){
                 this.diff = 0;
+                this.endFunc();
                 // Remove interval
                 clearInterval(interval);
             }
