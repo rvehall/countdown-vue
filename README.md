@@ -23,7 +23,7 @@ A simple countdown timer component for VueJS 2.
 
 ```javascript
 <script>
-import Countdown from 'vuejs-countdown'
+import Countdown from 'countdown-vue'
 
 export default {
   components: { Countdown }
